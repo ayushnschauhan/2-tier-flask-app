@@ -1,0 +1,52 @@
+Started by user AYUSH
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/DEMO-CICD
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (code)
+[Pipeline] git
+The recommended git tool is: NONE
+No credentials specified
+Cloning the remote Git repository
+Cloning repository https://github.com/ayushnschauhan/2-tier-flask-app.git
+ > git init /var/lib/jenkins/workspace/DEMO-CICD # timeout=10
+Fetching upstream changes from https://github.com/ayushnschauhan/2-tier-flask-app.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.43.0'
+ > git fetch --tags --force --progress -- https://github.com/ayushnschauhan/2-tier-flask-app.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git config remote.origin.url https://github.com/ayushnschauhan/2-tier-flask-app.git # timeout=10
+ > git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > git rev-parse refs/remotes/origin/app.py^{commit} # timeout=10
+Checking out Revision 52e435c0a7b4a05a974027d9232df49bbc9d1562 (refs/remotes/origin/app.py)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 52e435c0a7b4a05a974027d9232df49bbc9d1562 # timeout=10
+ > git branch -a -v --no-abbrev # timeout=10
+ > git checkout -b app.py 52e435c0a7b4a05a974027d9232df49bbc9d1562 # timeout=10
+Commit message: "Create src"
+First time build. Skipping changelog.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (build)
+[Pipeline] echo
+build bhi ho gya
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (test)
+[Pipeline] echo
+developer dekh lega
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (deploy)
+[Pipeline] echo
+Docker compose se ho gya
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
